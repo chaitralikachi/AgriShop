@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PaymentActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/rl112"
+        >
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card"
+            android:text="Card Number"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:layout_margin="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/creditCard_number_editText"
+            android:hint="Enter card number"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:inputType="number"
+            android:background="@color/white"
+            android:layout_below="@+id/card"
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/card_validity"
+            android:layout_below="@+id/creditCard_number_editText"
+            android:text="Card Validity"
+            android:textSize="20sp"
+            android:textColor="#FF5722"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_margin="20dp"
+            />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl112"
+        android:id="@+id/ll1"
+        >
+
+        <EditText
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/month_editText"
+            android:textSize="16sp"
+            android:hint="Month"
+            android:inputType="number"
+            android:background="@color/white"
+            android:textColor="@color/black"
+            android:layout_below="@+id/card_validity"
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
+            />
+
+        <EditText
+            android:id="@+id/year_editText"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:hint="Year"
+            android:layout_marginRight="10dp"
+            android:layout_marginStart="40dp"
+            android:layout_margin="20dp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:id="@+id/rl113">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cvv"
+            android:text="Cvv Number"
+            android:layout_marginTop="30dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#FF5722"
+            android:layout_margin="20dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cvv_number_editText"
+            android:hint="Enter CVV"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:inputType="number"
+            android:layout_below="@+id/cvv"
+            android:layout_marginTop="20dp"
+            android:layout_margin="20dp"
+            />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll12"
+        android:layout_below="@+id/rl113"
+        >
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/radioGroup"
+            android:layout_below="@+id/cvv_number_editText"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Delivery "
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_margin="20dp"
+                />
+
+            <RadioButton
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:text="Pickup"
+                android:textColor="#FF5722"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginStart="40dp"
+                android:layout_margin="20dp"/>
+
+        </RadioGroup>
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/payment_proceede_btn"
+        android:layout_below="@+id/ll12"
+        android:text="Proceed"
+        android:layout_marginRight="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="30dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:backgroundTint="#B94CAF50"/>
+</RelativeLayout>
